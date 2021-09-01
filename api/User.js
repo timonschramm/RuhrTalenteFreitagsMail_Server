@@ -137,6 +137,18 @@ router.post('/signin', (req, res) => {
                     })
                 })
             }
+            else {
+                res.json({
+                    status: "FAILED",
+                    message: "Invalid credentials"
+                })
+            }
+        })
+        .catch(err => {
+            res.json({
+                status: "FAILED",
+                message: "Error while running the programm"
+            })
         })
     }
 
