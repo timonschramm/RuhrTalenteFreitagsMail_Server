@@ -3,7 +3,7 @@ require('./config/db')
 
 var express = require('express')
 var app = express()
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 var router = express.Router()
 
