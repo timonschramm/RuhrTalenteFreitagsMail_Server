@@ -26,7 +26,8 @@ mongoose
     })
     .catch((err) => console.log(err))
 
-const conn = mongoose.connection;
+/*const conn = mongoose.connection;
 mongoose.connection.once('open', () => { console.log('MongoDB Connected'); });
 mongoose.connection.on('error', (err) => { console.log('MongoDB connection error: ', err); }); 
+*/
     
