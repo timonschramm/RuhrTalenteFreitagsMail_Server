@@ -14,16 +14,7 @@ router.post('/create-event', (req, res) => {
     lastSignUpDate = lastSignUpDate.trim();
     handlungsfeld = handlungsfeld.trim();
 
-    const newEvent = new Veranstaltung({
-        title,
-        subtitle,
-        content,
-        date,
-        time,
-        place,
-        lastSignUpDate,
-        handlungsfeld
-    });
+    
 
     if(title == "", subtitle == "", content == "", date == "", time == "", place == "", lastSignUpDate == "", handlungsfeld == ""){
         res.json({
@@ -32,6 +23,17 @@ router.post('/create-event', (req, res) => {
         })
     }
     else{
+        const newEvent = new Veranstaltung({
+            title,
+            subtitle,
+            content,
+            date,
+            time,
+            place,
+            lastSignUpDate,
+            handlungsfeld
+        });
+        
         newEvent.save().then(result => {
             res.json({
                 status: "SUCCESS",
