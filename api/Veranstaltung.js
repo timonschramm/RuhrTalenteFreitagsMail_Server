@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 
-const Veranstaltung = require("./../models/User")
+const Veranstaltung = require("./../models/Veranstaltung")
 
 router.post('/create-event', (req, res) => {
     let {title, subtitle, content, date, time, place, lastSignUpDate, handlungsfeld} = req.body;
@@ -33,7 +33,7 @@ router.post('/create-event', (req, res) => {
             lastSignUpDate,
             handlungsfeld
         });
-        
+
         newEvent.save().then(result => {
             res.json({
                 status: "SUCCESS",
