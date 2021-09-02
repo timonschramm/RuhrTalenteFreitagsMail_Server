@@ -42,3 +42,5 @@ router.post('/create-event', (req, res) => {
     }
     
 })
+
+module.exports = router;
