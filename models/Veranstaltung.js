@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const VeranstaltungSchema = new Schema({
-    titel: String,
-    subtitel: String,
+    title: String,
+    subtitle: String,
     content: String,
     date: Date,
     time: String,
