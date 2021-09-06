@@ -7,7 +7,7 @@ var app = express()
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Methods", "GET, DELETE, HEAD, OPTIONS")
+    res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, HEAD, OPTIONS")
     next();
   });
 const port = process.env.PORT || 3000;
