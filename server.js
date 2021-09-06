@@ -5,7 +5,11 @@ var express = require('express')
 var cors = require('cors')
 var app = express()
 
-app.use(cors())
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Methods", "GET, DELETE, HEAD, OPTIONS")
+    next();
+  });
 const port = process.env.PORT || 3000;
 
 var router = express.Router()
